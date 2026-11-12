@@ -1,5 +1,3 @@
-python
-Копировать
 class Streamer:
     def __init__(self, nickname, subscribers):
         self.nickname = nickname
@@ -21,3 +19,11 @@ streamer = Streamer("GolubKin", 1200)
 streamer.add_donate(500)
 streamer.add_donate(150)
 print("Код класса Стример загружен")
+
+def print_stats(streamer):
+    print(f"Стример: {streamer.nickname}")
+    print(f"Подписчики: {streamer.subscribers}")
+    print(f"Всего донатов: {streamer.total_donates()}")
+    print(f"Средний донат: {streamer.average_donate()}")
+
+print_stats(streamer)
